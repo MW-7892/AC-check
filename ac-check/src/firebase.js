@@ -1,5 +1,6 @@
 import firebase from 'firebase'
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyC_bsbWi2pZwhoIAA2ECUUHfsalZ07Z0K0",
     authDomain: "ac-check-8a4b4.firebaseapp.com",
@@ -12,8 +13,5 @@ const firebaseConfig = {
 
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth()
-auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-export const STR = firebaseApp.storage()
 
 export const RTDB = firebaseApp.database()
