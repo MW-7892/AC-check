@@ -453,6 +453,7 @@ export default {
       this.senddata = !this.can_submit
       await fetch('https://api.ipify.org?format=json')
         .then(x => x.json())
+        .then(x => console.log(x))
         .then(({ ip }) => {
             if(!(ip != ip)) this.ip = ip;
         });
@@ -463,6 +464,8 @@ export default {
             if(!(country != country)) this.country = country
         });
     }
+    console.log(this.ip)
+    console.log(this.country)
     
 
     await RTDB.ref(`Country`).once('value', snapshot => {
