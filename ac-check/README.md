@@ -1,24 +1,13 @@
 # ac-check
 
-## Project setup
+Simple website to learn more about your AC usage
 ```
-npm install
-```
+# How to use
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. Insert information in our form, depending on your actual usage of AC. However, you can enter any information and use check option instead, too.
+2. View your information about CO2 emission and electric bill cost. Also you can view the data about AC usage in your country.
+3. See other country information in the sidebay for more information.
 
-### Compiles and minifies for production
 ```
-npm run build
-```
+# Thank you
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
