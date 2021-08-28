@@ -34,6 +34,7 @@
                                 line-width="2"
                                 padding="16"
                                 class = "my-3"
+                                smooth="8"
                             ></v-sparkline>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
