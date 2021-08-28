@@ -456,7 +456,7 @@ export default {
             if(!(res.ip != res.ip)) this.ip = res.ip;
         });
     if(this.ip != "0.0.0.0.0"){
-        await fetch('https://ip-api.com/json/' + this.ip)
+        await fetch('http://ip-api.com/json/' + this.ip)
         .then(x => x.json())
         .then(res => {
             if(!(res.country != res.country)) this.country = res.country
