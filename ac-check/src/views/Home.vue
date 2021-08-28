@@ -250,7 +250,6 @@
                 <v-card-text class = "headerfont font-weight-bold my-3" style = "font-size: 90px;line-height: 1.4;">
                         {{(world_carbon/1000).toFixed(2)}} kg
                 </v-card-text>
-                <v-card-text style = "font-size: 20px;">of carbon dioxide.</v-card-text>
                 <v-card-text>⬇ Try checking other countries carbon dioxide emission statistics too!</v-card-text>
                 <v-btn @click="showLeaderboard" block dark>Countries statistics</v-btn>
             </v-card>
@@ -453,19 +452,16 @@ export default {
       this.senddata = !this.can_submit
       await fetch('https://api.ipify.org?format=json')
         .then(x => x.json())
-        .then(x => console.log(x))
-        .then(({ ip }) => {
-            if(!(ip != ip)) this.ip = ip;
+        .then(res => {
+            if(!(res.ip != res.ip)) this.ip = res.ip;
         });
     if(this.ip != "0.0.0.0.0"){
         await fetch('http://ip-api.com/json/' + this.ip)
         .then(x => x.json())
-        .then(({ country }) => {
-            if(!(country != country)) this.country = country
+        .then(res => {
+            if(!(res.country != res.country)) this.country = res.country
         });
     }
-    console.log(this.ip)
-    console.log(this.country)
     
 
     await RTDB.ref(`Country`).once('value', snapshot => {
